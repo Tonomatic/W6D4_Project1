@@ -33,24 +33,26 @@ describe('Word', function () {
     })
   })
   describe('removeConsonants function', function () {
-})
   it('should return the word with the consonants removed', function() {
     //Arrange
-
+    let expected = 'i'
     //Act
-
+    let value = word.removeConsonants()
     //Assert
-     expect.fail('Remove this expect.fail and replace it with your test');
+     expect(value).to.equal(expected)
+  })
   })
   describe('pigLatin function', function () {
-})
+
   it('should return the word converted to pig latin', function() {
     //Arrange
-
+    let expected = 'ingstray'
     //Act
-
+    let value = word.pigLatin();
     //Assert
-     expect.fail('Remove this expect.fail and replace it with your test');
+    expect(value).to.equal(expected)
 
   })
 })
+})
+
