@@ -3,7 +3,9 @@
 */
 function isFive(num) {
  if (num === 5) {
-   return 5;
+   return true;
+ } else {
+   return false;
  }
 }
 
@@ -12,9 +14,9 @@ function isFive(num) {
 */
 function isOdd(number) {
   if (typeof number !== 'number'){
-    throw Error('some error')
+    throw new Error('some error')
   }
-  return (number % 2 === 0);
+  return (number % 2 === 1);
 }
 
 /*3. Array  of the Range Write a function myRange(min, max, step) that takes in

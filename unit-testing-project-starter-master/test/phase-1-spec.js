@@ -4,45 +4,52 @@ const { isFive, isOdd, myRange, fizzBuzz} = require("../problems/phase-1");
 describe("isFive(num)", () => { 
   it("should return true if the num is 5 otherwise false", () => {
     //Arrange
+    let expected1 = true
     //Act
+    let five = isFive(5)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(five).to.equal(expected1)
+    // expect.fail('Remove this expect.fail and replace it with your test');
 
     //Arrange
+    let expected2 = false
     
     //Act
-    
+    let four = isFive(4)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(four).to.equal(expected2)
+     // expect.fail('Remove this expect.fail and replace it with your test');
 
   });
 });
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     //Arrange
-   
+    let expected1 = true
     //Act
-
+    let odd = isOdd(3)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(odd).to.equal(expected1)
 
   });
   it("should return false if the num is even", () => {
     //Arrange
-    
+    let expected2 = false  
     //Act
-    
+    let even = isOdd(2)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(even).to.equal(expected2)
 
   });
   it("should throw an error if num is not type of Number", () => {
     //Arrange
-    
+    let expected = Error
     //Act
-    
+    let error = function() {
+      return isOdd('string');
+    }
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(error).to.throw(expected)
 
   });
 });
