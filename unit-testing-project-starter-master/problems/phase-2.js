@@ -16,7 +16,7 @@ const mirrorArray = (array) => {
     newArray.push(el);
   }
 
-  for (let i = array.length - 1; i >= 0; i += 1) {
+  for (let i = array.length - 1; i >= 0; i -= 1) {
     let el = array[i];
     newArray.push(el);
   }
@@ -31,8 +31,10 @@ it will define a count variable, then it will return a function.
 When invoked the function returned by hiddenCounter will increment the counter by 1.
 */
 function hiddenCounter() {
-  let count = undefined;
-  return () => (count += 1);
+  let count = 0;
+  return () => {
+    (count += 1)
+    return count};
 }
 /*
 3. myMap 
@@ -46,7 +48,9 @@ Do not use the built in Array#map - use Array#forEach for iteration.
 const myMap = (array, cb) => {
   let mapped = [];
 
-  array.forEach((el) => mapped.push(el));
+  array.forEach((el) => {
+  let modEl = cb(el)
+  mapped.push(modEl)});
   return mapped;
 };
 
@@ -59,7 +63,7 @@ variable using the const keyword.
 const avgValue = (array) => {
   let sum = array.reduce((el, sum = 0) => (sum += el));
 
-  let avg = sum / array.length - 1;
+  let avg = sum / array.length;
   return avg;
 };
 
