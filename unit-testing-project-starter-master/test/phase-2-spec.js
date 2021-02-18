@@ -19,7 +19,7 @@ describe('mirrorArray()', function () {
 
 //2. hiddenCounter
 describe('hiddenCounter()', function () {
-  
+
   it('should return a function that will increment the counter when invoked', function () {
     //Arrange
     let expected = 3
@@ -53,14 +53,14 @@ describe('myMap', function () {
   it("should not call the built in Array#map", function () {
      //Arrange
     let mapArray = [1,2,3,4]
-    let mapSpy = chai.spy.on(mapArray, "forEach")
+    let mapSpy = chai.spy.on(mapArray, "map")
     let callback = function(el) {
      return el * 2;
      }
     //Act
     myMap(mapArray, callback)
     //Assert
-    expect(mapSpy).to.not.have.been.called;
+    expect(mapSpy).to.not.have.been.called();
   });
 })
 
