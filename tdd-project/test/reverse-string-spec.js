@@ -5,7 +5,7 @@ chai.use(spies);
 
 const reverseString = require('../problems/reverse-string.js');
 
-describe('First test', function () {
+describe('Reverse String', function () {
     it('should return a reversed string', function () {
         let string = 'nuf';
         let value = reverseString('fun')
@@ -16,4 +16,5 @@ describe('First test', function () {
         let value = function() {return reverseString(1)};
         expect(value).to.throw(expected)
     })
+
 });
